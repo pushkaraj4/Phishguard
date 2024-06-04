@@ -1,0 +1,57 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the main content */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the form section */
+.scan-form {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style the form input and button */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the scan results section */
+.scan-results {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.result {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}

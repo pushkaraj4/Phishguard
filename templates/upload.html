@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BG8-Phishing Website Detection</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+  <link href="static/assets/css/upload.css" rel="stylesheet">
+
+</head>
+
+<body >
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="home">PhishGuard</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="home" class="active">Home</a></li>
+
+          <!-- <li><a href="login">Sign IN</a></li> -->
+          
+           <!-- <li><a href="about">About</a></li> -->
+            
+          <li><a href="contact">Contact Us</a></li>
+          
+          <li><a href="upload" >Upload URL</a></li>
+         
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+<section class="scan-results">
+  <main>
+    <div class="row">
+      <div class="column">
+        <section class="scan-form" style="background-image: url(static/assets/img/img5.jpg);"><br><br><br>
+          <h4 style="color: whitesmoke; text-align: center;" class="animate__animated animate__fadeInUp">
+            Enter the URL below and check the website is legitimate or phishing.</h4>
+          <form action="/predict" method="GET" onsubmit="return validateForm();">
+            <label for="url">Check URL Here:</label>
+            <input type="text" id="url" name="url" placeholder="https://example.com" required
+              pattern="https?://.+" title="Please enter a valid URL starting with 'http://' or 'https://'">
+            <br><br>
+            <button class="btn-get-started animate__animated animate__fadeInUp scrollto"
+              id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> loading..."> <a
+                >Upload</a></button>
+          </form>
+          <script>
+            function validateForm() {
+              var urlInput = document.getElementById("url");
+              var urlPattern = new RegExp("^https?://.+");
+
+              if (!urlPattern.test(urlInput.value)) {
+                alert("Please enter a valid URL starting with 'http://' or 'https://'.");
+                urlInput.focus();
+                return false;
+              }
+
+              return true;
+            }
+          </script>
+        </section>
+      </div>
+      
+    </div>
+  </main>
+  <section style="background-color: whitesmoke; color: black; padding-left: 5%;">
+  <h4 style="text-align: center;color: black;">Welcome to Our Phishing Website Detection Platform</h4>
+  <h5>Purpose:</h5>
+  <h6>
+Our platform aims to empower users to detect and report potential phishing websites. Phishing websites are fraudulent sites designed to steal your personal information. Your contributions help in making the internet a safer place for everyone.
+</h6><br>
+<h5>How to Upload???</h5><br>
+
+<h6>Upload Method: You can upload suspected phishing website URLs by:</h6>
+<h6>
+1)Entering the URL directly into the text box.
+</h6>
+<h6>
+2)Privacy Assurance: Your privacy is our priority. Uploaded URLs are used only for detection purposes and are not stored or shared.
+</h6>
+</section>
+</section>
+
+<!-- FAQ Section-->
+  <section id="faq" class="faq">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content px-xl-5">
+              <h3>Frequently Asked <strong>Questions</strong></h3>
+              <p>
+                Explore our Frequently Asked Questions (FAQ) for essential information about phishing websites, detection methods, and how to safeguard your online security. Find answers to common queries and stay informed about the latest trends in phishing protection.
+              </p>
+            </div>
+
+            <div class="accordion accordion-flush px-xl-5" id="faqlist">
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    <i class="bi bi-question-circle question-icon"></i>
+                   What is a phishing website?
+                  </button>
+                </h3>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                   A phishing website is a fraudulent website designed to deceive users into believing it is a legitimate site. Its purpose is to steal sensitive information, such as login credentials, personal details, or financial data.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                    <i class="bi bi-question-circle question-icon"></i>
+                   How do phishing websites work?
+                  </button>
+                </h3>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                   Phishing websites work by mimicking the appearance and functionality of legitimate websites. They often use deceptive emails or messages to lure users in, where they are prompted to enter sensitive information. This information is then collected by cybercriminals for malicious purposes.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                    <i class="bi bi-question-circle question-icon"></i>
+                   Why should I be concerned about phishing websites?
+                  </button>
+                </h3>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                     Phishing websites can lead to identity theft, financial losses, and other serious consequences. Falling victim to a phishing attack can result in compromised personal and financial security.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                    <i class="bi bi-question-circle question-icon"></i>
+                    How can I recognize a phishing website?
+                  </button>
+                </h3>
+                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    <i class="bi bi-question-circle question-icon"></i>
+                   Phishing websites often exhibit red flags such as misspelled domain names, suspicious URLs, unsecured connections, and requests for sensitive information via email. Users should verify the website's legitimacy before sharing any personal data.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
+                    <i class="bi bi-question-circle question-icon"></i>
+                   What should I do if I suspect a website is a phishing site?
+                  </button>
+                </h3>
+                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    If you suspect a website is a phishing site, do not enter any personal information. Close the website, report it to the appropriate authorities, and notify the legitimate entity it impersonates.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+               <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-6">
+                    <i class="bi bi-question-circle question-icon"></i>
+                   Are there tools or services available to help detect phishing websites?
+                  </button>
+                </h3>
+                <div id="faq-content-6" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Yes,PHISHGUARD is there to help you... also there are browser extensions, antivirus software, and online services that can help detect and block phishing websites. These tools can provide an extra layer of protection against phishing threats.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-7">
+                    <i class="bi bi-question-circle question-icon"></i>
+                  How can I protect myself from phishing attacks?
+                  </button>
+                </h3>
+                <div id="faq-content-7" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Protect yourself by being cautious of unsolicited emails, verifying website URLs, keeping your software and antivirus tools updated, and educating yourself on common phishing tactics.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-8">
+                    <i class="bi bi-question-circle question-icon"></i>
+                  Do web browsers have built-in phishing protection?
+                  </button>
+                </h3>
+                <div id="faq-content-8" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                   Yes, most modern web browsers have built-in phishing protection that can warn users when they visit a known phishing site or encounter suspicious content.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("static/assets/img/faq.jpg");'>&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End F.A.Q Section -->
+
+<h5 style="text-align: center; ">Disclaimer</h5>
+<h6 style="text-align: center;">While we strive for accuracy, our service may not guarantee 100% detection of phishing websites. Your awareness and contributions are vital in combating online threats.</h6>
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>PhishGuard</h3>
+              <p>
+                abc xyz <br>
+                Kolhapur 416 003, India<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> phishguard@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li> -->
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="login.html">login</a></li> -->
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+</html>
