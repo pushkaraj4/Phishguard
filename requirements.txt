@@ -4,5 +4,4 @@ matplotlib
 seaborn
 scikit-learn
 xgboost==2.0.2
-pickle==1.21.6
 flask
