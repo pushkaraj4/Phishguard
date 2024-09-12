@@ -4,6 +4,6 @@ matplotlib
 seaborn
 scikit-learn
 xgboost==2.1.0
-pickle
+pickle==0.7.5
 flask
 tensorflow
