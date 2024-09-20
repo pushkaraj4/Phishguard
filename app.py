@@ -41,4 +41,4 @@ if __name__=="__main__":
     def SignIn():
         return render_template("login.html")
     
-    app.run(debug=True)
+    app.run(debug=False)
