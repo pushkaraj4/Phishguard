@@ -6,3 +6,4 @@ scikit-learn
 xgboost==2.0.2
 flask
 gunicorn
+psycopg2
