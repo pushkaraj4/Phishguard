@@ -5,4 +5,4 @@ seaborn
 scikit-learn
 xgboost==2.0.2
 flask
-gunicorn==19.7.1
+gunicorn
